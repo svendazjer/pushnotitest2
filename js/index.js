@@ -40,7 +40,7 @@ var app = {
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
-        alert("q ondiwi: "+error);
+        alert("q ondiwi: "+error+"-"+error.msg);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
