@@ -62,7 +62,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-		alert('rlz');
+		alert('rlzzzzz');
 
         console.log('Received Event: ' + id);
     },
