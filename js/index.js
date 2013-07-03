@@ -122,10 +122,12 @@ var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 function registraEquipo(idUsuario, idRegisterGcm) {
 	$.post(urlpushnoti+"registerdevice.php", {
 			registerId:idRegisterGcm,
-			userId: idUsuario
+			userId:idUsuario
 		}, 
 		function(data) {
-			alert("q onda po! "+data+"==");
+			alert("q onda po! "+data+"=="+urlpushnoti+"registerdevice.php");
 			return data;
-	});
+	})
+	.done(function() { alert("termine rules"); })
+	.fail(function() { alert("error"); });
 }
