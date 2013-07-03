@@ -128,6 +128,5 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 			alert("q onda po! "+data+"=="+urlpushnoti+"registerdevice.php");
 			return data;
 	})
-	.done(function() { alert("termine rules"); })
 	.fail(function() { alert("error"); });
 }
