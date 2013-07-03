@@ -62,7 +62,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-		alert('rlzzzzz');
+		//alert('rlzzzzz');
 
         console.log('Received Event: ' + id);
     },
@@ -125,6 +125,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 			userId: idUsuario
 		}, 
 		function(data) {
+			alert("q onda po!");
 			return data;
 	});
 }
