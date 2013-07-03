@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = 'http://www.w3.org/ns/widgets'
         xmlns:gap = 'http://phonegap.com/ns/1.0'
-        id        = "org.devgirl.pgb-push-app2"
+        id        = "com.domy.testing.push.notifications"
         version   = "0.0.1">
-    <name>Push Plugin Sample</name>
+    <name>Notificaciones(Anuncios) Medfamiliar</name>
 
     <description>
-        Push Plugin Sample for PhoneGap Build
+        Aplicación para recibir Anuncios de Medfamiliar
     </description>
 
-    <author href="http://devgirl.org" email="hschinsk@adobe.com">
-        Holly Schinsky
+    <author href="http://devgirl.org" email="svanrinskreiberg@gmail.com">
+        Svendazjer Van Rinskreiberg
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
-    <preference name="phonegap-version" value="2.7.0" />
+    <preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -45,6 +45,6 @@
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
-	<gap:plugin name="PushPlugin" value="com.plugin.gcm.PushPlugin" />
-	<!--<gap:plugin name="GenericPush"/>-->
+
+	<gap:plugin name="GenericPush"/>
 </widget>
