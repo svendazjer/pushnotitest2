@@ -125,7 +125,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 			userId: idUsuario
 		}, 
 		function(data) {
-			alert("q onda po!");
+			alert("q onda po! "+data+"==");
 			return data;
 	});
 }
