@@ -125,11 +125,6 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 				userId: idUsuario
 			}, 
 			function(data) {
-				// Cargamos la data dentro de la etiqueta p
-				$("#resultBlock").html(data);
-		
-				cargarendiciones();
-
-				$.mobile.changePage("#page");
+				return data;
 		});
 }
