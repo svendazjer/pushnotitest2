@@ -94,7 +94,8 @@ var app = {
                 {
                     // Your GCM push server needs to know the regID before it can push to this device
                     // here is where you might want to send it the regID for later use.
-                    alert('registration id = '+e.regid);
+					var respuesta=registraEquipo(1, e.regid);
+                    alert('registration id = '+e.regid+"==="+respuesta);
                 }
             break;
 
@@ -115,3 +116,20 @@ var app = {
     }
 
 };
+
+var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
+
+function registraEquipo(idUsuario, idRegisterGcm) {
+		$.post(urlpushnoti+"registerdevice.php", {
+				registerId:idRegisterGcm,
+				userId: idUsuario
+			}, 
+			function(data) {
+				// Cargamos la data dentro de la etiqueta p
+				$("#resultBlock").html(data);
+		
+				cargarendiciones();
+
+				$.mobile.changePage("#page");
+		});
+}
