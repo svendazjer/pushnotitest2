@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -94,7 +97,8 @@ var app = {
                 {
                     // Your GCM push server needs to know the regID before it can push to this device
                     // here is where you might want to send it the regID for later use.
-					var respuesta=registraEquipo(1, e.regid);
+					//var respuesta=registraEquipo(1, e.regid);
+					var respuesta=app.registraEquipo2(1, e.regid);
                     alert('registration id = '+e.regid+"==="+respuesta);
                 }
             break;
@@ -113,11 +117,20 @@ var app = {
               alert('An unknown GCM event has occurred');
               break;
         }
-    }
-
+    },
+	
+	registraEquipo2: function(idUsuario, idRegisterGcm) {
+		$.post(urlpushnoti+"registerdevice.php", {
+				registerId:idRegisterGcm,
+				userId:idUsuario
+			}, 
+			function(data) {
+				alert("q onda po! "+data+"=="+urlpushnoti+"registerdevice.php");
+				return data;
+		})
+		.fail(function() { alert("error"); });
+	}
 };
-
-var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 
 function registraEquipo(idUsuario, idRegisterGcm) {
 	$.post(urlpushnoti+"registerdevice.php", {
