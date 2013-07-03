@@ -120,11 +120,11 @@ var app = {
 var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 
 function registraEquipo(idUsuario, idRegisterGcm) {
-		$.post(urlpushnoti+"registerdevice.php", {
-				registerId:idRegisterGcm,
-				userId: idUsuario
-			}, 
-			function(data) {
-				return data;
-		});
+	$.post(urlpushnoti+"registerdevice.php", {
+			registerId:idRegisterGcm,
+			userId: idUsuario
+		}, 
+		function(data) {
+			return data;
+	});
 }
