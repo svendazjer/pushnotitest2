@@ -74,6 +74,7 @@ function onNotificationGCM(e) {
 		break;
 		
 		case 'message':
+			alert(e.message);
 			// if this flag is set, this notification happened while we were in the foreground.
 			// you might want to play a sound to get the user's attention, throw up a dialog, etc.
 			if (e.foreground)
