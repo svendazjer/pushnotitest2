@@ -46,12 +46,23 @@ function onNotificationGCM(e) {
 		if ( e.regid.length > 0 )
 		{
 			cargaranuncios();
-			alert(e.regid);
-			var respuesta=registraEquipo("1", e.regid);
+			//alert(e.regid);
+			//var respuesta=registraEquipo("1", e.regid);
 			alert('registration id = '+e.regid+"==="+respuesta);
 			// Your GCM push server needs to know the regID before it can push to this device
 			// here is where you might want to send it the regID for later use.
 			console.log("regID = " + e.regID);
+
+
+			$.post(urlpushnoti+"registerdevice.php", {
+					registerId:e.regid,
+					userId:"1"
+				}, 
+				function(data) {
+					alert("q onda poooo! "+data+"=="+urlpushnoti+"registerdevice.php");
+					return data;
+			})
+			.fail(function() { alert("error"); });
 		}
 		break;
 		
@@ -120,7 +131,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 function cargaranuncios() {
 	alert("entrando a funcion cargar anuncios");
 	$.get(urlpushnoti+"registerdevice.php", function(data){
-		alert(data);
+		alert("q pasa po ctm!! "+data);
 	});
 }
 
