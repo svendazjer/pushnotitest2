@@ -1,27 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = 'http://www.w3.org/ns/widgets'
-        xmlns:gap = 'http://phonegap.com/ns/1.0'
-        id        = "com.domy.testing.push.notifications"
-        version   = "0.0.1">
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.raxtel.rendiciones"
+    version   = "1.0.0">
 
-    <name>Notificaciones(Anuncios) Medfamiliar</name>
+<name>Notificaciones</name>
 
-    <!--<feature name="http://api.phonegap.com/1.0/device" />-->
-	<feature name="http://api.phonegap.com/1.0/camera"/>
-	<feature name="http://api.phonegap.com/1.0/file"/>
-	<feature name="http://api.phonegap.com/1.0/geolocation"/>
-	<feature name="http://api.phonegap.com/1.0/capture"/>
-	<feature name="http://api.phonegap.com/1.0/storage"/>
-	
-    <preference name="phonegap-version" value="2.9.0" />
+<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+<plugin name="Storage" value="org.apache.cordova.Storage" />
+<plugin name="Capture" value="org.apache.cordova.Capture"/>
 
-	<!--<gap:plugin name="GenericPush"/>-->
+<preference name="phonegap-version" value="2.9.0" />
 
-    <description>
-        Aplicación para recibir Anuncios de Medfamiliar
-    </description>
+<!--<preference name="permissions" value="android.permission.WRITE_EXTERNAL_STORAGE" />-->
 
-    <author href="http://devgirl.org" email="svanrinskreiberg@gmail.com">
-        Svendazjer Van Rinskreiberg
-    </author>
+<feature name="http://api.phonegap.com/1.0/camera"/>
+<feature name="http://api.phonegap.com/1.0/file"/>
+<feature name="http://api.phonegap.com/1.0/storage"/>
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+<feature name="http://api.phonegap.com/1.0/capture"/>
+
+<description>
+Aplicación para notificaciones.
+</description>
+
+<author href="http://raxtel.com" email="ftoloza@intus.cl">
+Domy - INTUS
+</author>
+
 </widget>
