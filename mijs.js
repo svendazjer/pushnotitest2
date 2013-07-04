@@ -1,6 +1,6 @@
 
 //var pushNotification;
-//var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
+var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 var urlrendiciones="http://s2.intus.cl/rendicionesweb/";
 
 $(document).ready(function() {
@@ -138,9 +138,9 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
-	//$.get("http://www.google.cl", function(data){
-	$.get(urlrendiciones+"lista_rendiciones.php", function(data){
-		alert("q pasa po ctm!!!!! ");
+	$.get(urlpushnoti+"registerdevice.php", function(data){
+	//$.get(urlrendiciones+"lista_rendiciones.php", function(data){
+		alert("q pasa po ctm!!!!! "+data);
 	}).fail(function() { alert("errors get"); });
 }
 
