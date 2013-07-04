@@ -131,14 +131,15 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 			alert("q onda po! "+data+"=="+urlpushnoti+"registerdevice.php");
 			return data;
 	})
-	.fail(function() { alert("error"); });
+	.fail(function() { alert("errorsss"); });
 }
 
 function cargaranuncios() {
+	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
 	$.get("http://www.google.cl", function(data){
-		alert("q pasa po ctm!! "+data);
-	});
+		alert("q pasa po ctm!!!!! ");
+	}).fail(function() { alert("errors get"); });
 }
 
 document.addEventListener('deviceready', onDeviceReady, true);
