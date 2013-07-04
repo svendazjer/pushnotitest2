@@ -3,6 +3,7 @@ var pushNotification;
 var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 
 $(document).ready(function() {
+	alert("documento listo!");
 	cargaranuncios();
 });
 
