@@ -7,7 +7,7 @@ $(document).ready(function() {
 	alert("documento listo!");
 	cargaranuncios();
 });
-
+/*
 function onDeviceReady() {
 	try 
 	{ 
@@ -135,14 +135,14 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 	})
 	.fail(function() { alert("errorsss"); });
 }
-
+*/
 function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
-	$.get(urlpushnoti+"registerdevice.php", function(data){
-	//$.get(urlrendiciones+"lista_rendiciones.php", function(data){
+	//$.get(urlpushnoti+"registerdevice.php", function(data){
+	$.get(urlrendiciones+"lista_rendiciones.php", function(data){
 		alert("q pasa po ctm!!!!! "+data);
 	}).fail(function() { alert("errors get"); });
 }
 
-document.addEventListener('deviceready', onDeviceReady, true);
+//document.addEventListener('deviceready', onDeviceReady, true);
