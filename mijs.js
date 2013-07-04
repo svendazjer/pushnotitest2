@@ -140,8 +140,9 @@ function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
 	//$.get(urlpushnoti+"registerdevice.php", function(data){
-	$.get(urlrendiciones+"lista_rendiciones.php", function(data){
-		alert("q pasa po ctm!!!!! "+data+"====");
+	$.get(urlrendiciones+"lista_rendiciones.php", function(datata){
+		alert("q pasa po ctm!!!!! "+datata+"====");
+		$("#conectando").text(datata);
 	}).fail(function() { alert("errors get"); });
 }
 
