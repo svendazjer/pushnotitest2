@@ -6,7 +6,7 @@
 
     <name>Notificaciones(Anuncios) Medfamiliar</name>
 
-    <feature name="http://api.phonegap.com/1.0/device" />
+    <!--<feature name="http://api.phonegap.com/1.0/device" />-->
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 	<feature name="http://api.phonegap.com/1.0/file"/>
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
