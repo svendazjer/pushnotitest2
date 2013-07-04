@@ -135,7 +135,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 
 function cargaranuncios() {
 	alert("entrando a funcion cargar anuncios");
-	$.get(urlpushnoti+"registerdevice.php", function(data){
+	$.get("http://www.google.cl", function(data){
 		alert("q pasa po ctm!! "+data);
 	});
 }
