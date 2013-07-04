@@ -4,6 +4,8 @@
         id        = "com.domy.testing.push.notifications"
         version   = "0.0.1">
 
+    <name>Notificaciones(Anuncios) Medfamiliar</name>
+
     <feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 	<feature name="http://api.phonegap.com/1.0/file"/>
@@ -12,13 +14,8 @@
 	<feature name="http://api.phonegap.com/1.0/storage"/>
 	
     <preference name="phonegap-version" value="2.9.0" />
-    <preference name="orientation"      value="default" />
-    <preference name="target-device"    value="universal" />
-    <preference name="fullscreen"       value="false" />
 
 	<!--<gap:plugin name="GenericPush"/>-->
-
-    <name>Notificaciones(Anuncios) Medfamiliar</name>
 
     <description>
         Aplicación para recibir Anuncios de Medfamiliar
