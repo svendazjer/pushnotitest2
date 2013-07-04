@@ -1,12 +1,13 @@
 
-var pushNotification;
-var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
+//var pushNotification;
+//var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
+var urlrendiciones="http://s2.intus.cl/rendicionesweb/";
 
 $(document).ready(function() {
 	alert("documento listo!");
 	cargaranuncios();
 });
-
+/*
 function onDeviceReady() {
 	try 
 	{ 
@@ -133,13 +134,14 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 	})
 	.fail(function() { alert("errorsss"); });
 }
-
+*/
 function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
-	$.get("http://www.google.cl", function(data){
+	//$.get("http://www.google.cl", function(data){
+	$.get(urlrendiciones+"lista_rendiciones.php", function(data){
 		alert("q pasa po ctm!!!!! ");
 	}).fail(function() { alert("errors get"); });
 }
 
-document.addEventListener('deviceready', onDeviceReady, true);
+//document.addEventListener('deviceready', onDeviceReady, true);
