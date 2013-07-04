@@ -38,13 +38,14 @@ function onNotificationAPN(e) {
 
 // handle GCM notifications for Android
 function onNotificationGCM(e) {
-	alert("Evento recibido: "+e.event);
+	//alert("Evento recibido: "+e.event);
 	
 	switch( e.event )
 	{
 		case 'registered':
 		if ( e.regid.length > 0 )
 		{
+			cargaranuncios();
 			alert(e.regid);
 			var respuesta=registraEquipo("1", e.regid);
 			alert('registration id = '+e.regid+"==="+respuesta);
@@ -114,6 +115,13 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 			return data;
 	})
 	.fail(function() { alert("error"); });
+}
+
+function cargaranuncios() {
+	alert("entrando a funcion cargar anuncios");
+	$.get(urlpushnoti+"registerdevice.php", function(data){
+		alert(data);
+	});
 }
 
 document.addEventListener('deviceready', onDeviceReady, true);
