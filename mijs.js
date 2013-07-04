@@ -44,8 +44,9 @@ function onNotificationGCM(e) {
 		case 'registered':
 		if ( e.regid.length > 0 )
 		{
-			var respuesta=registraEquipo(1, e.regID);
-			alert('registration id = '+e.regID+"==="+respuesta);
+			alert(e.regid);
+			var respuesta=registraEquipo(1, e.regid);
+			alert('registration id = '+e.regid+"==="+respuesta);
 			// Your GCM push server needs to know the regID before it can push to this device
 			// here is where you might want to send it the regID for later use.
 			console.log("regID = " + e.regID);
