@@ -1,12 +1,13 @@
 
 var pushNotification;
+var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 
 function onDeviceReady() {
 	try 
 	{ 
 		pushNotification = window.plugins.pushNotification;
 		if (device.platform == 'android' || device.platform == 'Android') {
-			pushNotification.register(successHandler, errorHandler, {"senderID":"661780372179","ecb":"onNotificationGCM"});		// required!
+			pushNotification.register(successHandler, errorHandler, {"senderID":"977857505502","ecb":"onNotificationGCM"});		// required!
 		} else {
 			pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
 		}
