@@ -2,6 +2,10 @@
 var pushNotification;
 var urlpushnoti="http://www.medfamiliar.cl/main/pushNotifications/";
 
+$(document).ready(function() {
+	cargaranuncios();
+});
+
 function onDeviceReady() {
 	try 
 	{ 
@@ -45,7 +49,7 @@ function onNotificationGCM(e) {
 		case 'registered':
 		if ( e.regid.length > 0 )
 		{
-			cargaranuncios();
+			//cargaranuncios();
 			//alert(e.regid);
 			//var respuesta=registraEquipo("1", e.regid);
 			//alert('registration id = '+e.regid+"==="+respuesta);
