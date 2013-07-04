@@ -7,7 +7,7 @@ $(document).ready(function() {
 	alert("documento listo!");
 	cargaranuncios();
 });
-/*
+
 function onDeviceReady() {
 	try 
 	{ 
@@ -134,7 +134,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 	})
 	.fail(function() { alert("errorsss"); });
 }
-*/
+
 function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
@@ -144,4 +144,4 @@ function cargaranuncios() {
 	}).fail(function() { alert("errors get"); });
 }
 
-//document.addEventListener('deviceready', onDeviceReady, true);
+document.addEventListener('deviceready', onDeviceReady, true);
