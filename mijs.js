@@ -5,9 +5,9 @@ var urlrendiciones="http://s2.intus.cl/rendicionesweb/";
 
 $(document).ready(function() {
 	alert("documento listo!");
-	cargaranuncios();
+	//cargaranuncios();
 });
-/*
+///*
 function onDeviceReady() {
 	try 
 	{ 
@@ -60,7 +60,7 @@ function onNotificationGCM(e) {
 			// here is where you might want to send it the regID for later use.
 			console.log("regID = " + e.regID);
 
-
+			/*
 			$.post(urlpushnoti+"registerdevice.php", {
 					registerId:e.regid,
 					userId:"1"
@@ -70,6 +70,7 @@ function onNotificationGCM(e) {
 					return data;
 			})
 			.fail(function() { alert("error"); });
+			*/
 		}
 		break;
 		
@@ -135,7 +136,7 @@ function registraEquipo(idUsuario, idRegisterGcm) {
 	})
 	.fail(function() { alert("errorsss"); });
 }
-*/
+//*/
 function cargaranuncios() {
 	$("#conectando").text("etere");
 	alert("entrando a funcion cargar anuncios");
