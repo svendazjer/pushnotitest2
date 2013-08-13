@@ -147,4 +147,4 @@ function cargaranuncios() {
 	}).fail(function() { alert("errors get"); });
 }
 
-//document.addEventListener('deviceready', onDeviceReady, true);
+document.addEventListener('deviceready', onDeviceReady, true);
