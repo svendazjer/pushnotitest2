@@ -14,7 +14,7 @@
 
 <preference name="phonegap-version" value="2.9.0" />
 
-<gap:plugin name="com.adobe.plugins.pushplugin" />
+<gap:plugin name="com.phonegap.plugins.pushplugin" />
 
 <!--<preference name="permissions" value="android.permission.WRITE_EXTERNAL_STORAGE" />-->
 
